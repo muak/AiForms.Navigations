@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ai:AiTabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ai="clr-namespace:AiForms.Navigations;assembly=AiForms.Navigations"
+    x:Class="Sample.RootPage"
+
+    SelectedTabColor="Orange" UnselectedTabColor="PaleGoldenrod"
+    BarTextColor="Gray" BarBackgroundColor="AliceBlue"
+    SelectedTextColor="Black" UnSelectedTextColor="LightGray"
+    IsTextHidden="False" TabFontSize="16">
+  <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Tab1" IconImageSource="Icon1" BarBackgroundColor="Aqua">
+        <x:Arguments>
+            <ContentPage Title="hoge1">
+                <!--<Image Source="Icon1" />-->
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Tab2" IconImageSource="Icon1" BarBackgroundColor="Brown">
+        <x:Arguments>
+            <ContentPage Title="hoge2" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Tab3" IconImageSource="Icon1">
+        <x:Arguments>
+            <ContentPage Title="hoge3" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Tab4" IconImageSource="Icon1">
+        <x:Arguments>
+            <ContentPage Title="hoge4" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Tab5" IconImageSource="Icon1">
+        <x:Arguments>
+            <ContentPage Title="hoge5" />
+        </x:Arguments>
+    </NavigationPage>
+</ai:AiTabbedPage>

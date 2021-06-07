@@ -1,0 +1,53 @@
+<Project Sdk="MSBuild.Sdk.Extras/3.0.22">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1;xamarin.ios10;monoandroid10.0</TargetFrameworks>
+    <ReleaseVersion>1.08</ReleaseVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+	<Compile Remove="Platforms\**\*.*" />
+    <None Include="Platforms\**\*.*" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>8.0</LangVersion>
+	<DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>	
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard'))">
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('monoandroid'))">
+    <AndroidResource Include="Resources\**\*.axml" SubType="Designer" Generator="MSBuild:UpdateAndroidResources" />
+    <AndroidResource Include="Resources\**\*.xml" SubType="Designer" Generator="MSBuild:UpdateAndroidResources" />
+    <AndroidResource Include="Resources\**\*.png" SubType="Designer" Generator="MSBuild:UpdateAndroidResources" />
+    <Compile Include="Platforms\Android\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('xamarin.ios')) ">
+    <Compile Include="Platforms\ios\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AiTabbedPage.cs">
+      <SubType></SubType>
+    </Compile>
+    <Compile Update="TabItem.cs">
+      <SubType></SubType>
+    </Compile>
+    <Compile Update="AiNavigationPage.cs">
+      <SubType></SubType>
+    </Compile>
+    <Compile Update="AiToolbarItem.cs">
+      <SubType></SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
