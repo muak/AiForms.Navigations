@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>AiForms.Navigations</id>
+        <version>0.0.1</version>
+        <title>AiFormsNavigations for Xamarin.Forms</title>
+        <authors>kamu</authors>
+        <owners>kamu</owners>
+        <projectUrl>https://github.com/muak/AiForms.Navigations</projectUrl>
+        <licenseUrl>https://github.com/muak/AiForms.Navigations/blob/master/LICENSE.txt</licenseUrl>        
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>CustomRenderers for Navigation</description>
+        <summary></summary>
+        <releaseNotes>
+        </releaseNotes>
+        <tags>Xamarin.Forms</tags>
+        <language>en-US</language>
+        <dependencies>
+            <group targetFramework="netstandard2.1">
+                <dependency id="Xamarin.Forms" version="5.0.0.2012" />
+            </group>
+            <group targetFramework="netstandard2.0">
+                <dependency id="Xamarin.Forms" version="5.0.0.2012" />
+            </group>
+            <group targetFramework="MonoAndroid">
+                <dependency id="Xamarin.Forms" version="5.0.0.2012" />
+            </group>
+            <group targetFramework="Xamarin.iOS10">
+                <dependency id="Xamarin.Forms" version="5.0.0.2012" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <!-- .net standard 2.1 -->
+        <file src="artifacts/netstandard2.1/AiForms.Navigations.dll" target="lib/netstandard2.1" />
+        <file src="artifacts/netstandard2.1/AiForms.Navigations.xml" target="lib/netstandard2.1" />
+        <file src="artifacts/netstandard2.1/AiForms.Navigations.pdb" target="lib/netstandard2.1" />
+
+        <!-- .net standard 2.0 -->
+        <file src="artifacts/netstandard2.0/AiForms.Navigations.dll" target="lib/netstandard2.0" />
+        <file src="artifacts/netstandard2.0/AiForms.Navigations.xml" target="lib/netstandard2.0" />
+        <file src="artifacts/netstandard2.0/AiForms.Navigations.pdb" target="lib/netstandard2.0" />
+
+        <!-- Mono.Android -->
+        <file src="artifacts/monoandroid10.0/AiForms.Navigations.dll" target="lib/MonoAndroid" />
+        <file src="artifacts/monoandroid10.0/AiForms.Navigations.xml" target="lib/MonoAndroid" />
+        <file src="artifacts/monoandroid10.0/AiForms.Navigations.pdb" target="lib/MonoAndroid" />
+
+        <!-- Xamarin.iOS -->
+        <file src="artifacts/xamarin.ios10/AiForms.Navigations.dll" target="lib/Xamarin.iOS10" />
+        <file src="artifacts/xamarin.ios10/AiForms.Navigations.xml" target="lib/Xamarin.iOS10" />
+        <file src="artifacts/xamarin.ios10/AiForms.Navigations.pdb" target="lib/Xamarin.iOS10" />
+    </files>
+</package>
